@@ -6,18 +6,27 @@ Emerging market financial datasets are often fragmented, inconsistent, and not s
 The pipeline supports:
 
 time-series return construction
+
 cross-sectional equity analysis
+
 portfolio risk aggregation
+
 extreme value (tail risk) modelling
+
 stress testing under market shock scenarios
 
 
 Key Features
 Multi-year NSE dataset harmonisation (2007–2025)
+
 Stock-level panel construction (code × date structure)
+
 Return computation and cleaning
+
 Missing data handling in EM environments
+
 Ready integration for EVT / GPD modelling
+
 Portfolio stress testing framework (in development)
 
 
@@ -27,8 +36,11 @@ Unlike developed market datasets (e.g. CRSP, Bloomberg), emerging market dataset
 
 Current Stage
 Data pipeline: complete
+
 Feature engineering: in progress
+
 EVT modelling: upcoming
+
 Portfolio stress testing: upcoming
 
 ## Author
