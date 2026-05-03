@@ -1,48 +1,97 @@
 # NSE-Emerging-Markets-FX-Equity-Stress-Testing-
-This project builds a reproducible equity panel dataset for the Nairobi Securities Exchange (NSE) spanning 2007–2025 and implements a framework for emerging market stress testing using Extreme Value Theory (EVT).
+## Status: Research in Progress  
+## Focus: Emerging Markets | Risk Modelling | Data Construction  
 
-Emerging market financial datasets are often fragmented, inconsistent, and not structured for direct quantitative analysis. This project addresses that gap by constructing a clean, research-ready panel dataset from raw historical NSE equity records spanning 19 years.
+## Overview
 
-The pipeline supports:
+This repository develops a reproducible pipeline for constructing a research-ready equity panel dataset from Nairobi Securities Exchange (NSE) historical data (2007–2025) and applying quantitative risk modelling techniques, including Extreme Value Theory (EVT), for portfolio stress testing.
 
-- time-series return construction
+Emerging market datasets are often fragmented and inconsistent, limiting their direct use in financial modelling. This project addresses that gap by integrating data engineering and financial econometrics into a unified workflow.
 
-- cross-sectional equity analysis
+## Research Objectives
 
-- portfolio risk aggregation
+- Construct a consistent stock-level panel dataset from raw NSE files
 
-- extreme value (tail risk) modelling
+- Enable return computation and cross-sectional analysis
 
-- stress testing under market shock scenarios
+- Develop a framework for portfolio construction
 
+- Apply EVT methods for tail risk estimation
 
-Key Features so far:
-
-- Multi-year NSE dataset harmonisation (2007–2025)
-
-- Stock-level panel construction (code × date structure)
-
-- Return computation and cleaning
-
-- Missing data handling in EM environments
-
-- Ready integration for EVT / GPD modelling
-
-- Portfolio stress testing framework (in development)
+- Evaluate stress scenarios in an emerging market context
 
 
-Research Motivation
+## Raw Dataset Description
+Coverage: 2007–2025
+Observations: ~300,000+
+Structure: Panel (date × stock code)
 
-Unlike developed market datasets (e.g. CRSP, Bloomberg), emerging market datasets require significant preprocessing before being usable for quantitative modelling. This project treats data construction as part of the research problem rather than a preprocessing step.
 
-Current Stage
-1. Data pipeline: complete
+## Core variables:
+date
+code
+day_price
+return
+volume (partial coverage)
 
-2. Feature engineering: in progress
 
-3. EVT modelling: upcoming
+## Methodology Pipeline
 
-4. Portfolio stress testing: upcoming
+Raw NSE Files
+    ↓
+Data Cleaning & Harmonisation
+    ↓
+Panel Dataset Construction
+    ↓
+Return Computation
+    ↓
+Portfolio Construction
+    ↓
+EVT Tail Risk Modelling
+
+## Key Challenges (Emerging Market Context)
+
+- Inconsistent schema across years
+  
+- Missing observations in price and volume
+  
+- Sparse liquidity for certain assets
+  
+- Structural breaks in time series
+
+These characteristics are explicitly accounted for in the data pipeline and modelling approach.
+
+## Repository Structure
+src/ → core pipeline and modelling code
+notebooks/ → exploratory and validation analysis
+data/processed/ → clean dataset (parquet)
+outputs/ → figures and results
+docs/ → methodology and dataset notes
+
+## Current Status
+
+## Data pipeline: complete
+
+## Return computation: complete
+
+## Portfolio construction: in progress
+
+## EVT modelling: upcoming
+
+
+## Reproducibility
+
+## To run the pipeline:
+
+pip install -r requirements.txt
+
+python src/data_pipeline.py
+
+python src/feature_engineering.py
+
+## Research Contribution
+
+This project demonstrates how data construction forms a critical component of financial modelling in emerging markets, where standardized datasets are limited. It provides a foundation for systematic risk analysis and stress testing within frontier equity markets.
 
 ## Author
 ## Maina Silvia
