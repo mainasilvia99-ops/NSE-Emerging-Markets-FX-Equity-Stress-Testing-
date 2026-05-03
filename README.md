@@ -1,6 +1,7 @@
 # NSE-Emerging-Markets-FX-Equity-Stress-Testing-
-## Status: Research in Progress  
-## Focus: Emerging Markets | Risk Modelling | Data Construction  
+
+# Status: Research in Progress  
+# Focus: Emerging Markets | Risk Modelling | Data Construction  
 
 ## Overview
 
@@ -23,15 +24,21 @@ Emerging market datasets are often fragmented and inconsistent, limiting their d
 
 ## Raw Dataset Description
 Coverage: 2007–2025
+
 Observations: ~300,000+
+
 Structure: Panel (date × stock code)
 
 
 ## Core variables:
 date
+
 code
+
 day_price
+
 return
+
 volume (partial coverage)
 
 
@@ -39,14 +46,19 @@ volume (partial coverage)
 
 Raw NSE Files
     ↓
+    
 Data Cleaning & Harmonisation
     ↓
+    
 Panel Dataset Construction
     ↓
+    
 Return Computation
     ↓
+    
 Portfolio Construction
     ↓
+    
 EVT Tail Risk Modelling
 
 ## Key Challenges (Emerging Market Context)
@@ -63,25 +75,28 @@ These characteristics are explicitly accounted for in the data pipeline and mode
 
 ## Repository Structure
 src/ → core pipeline and modelling code
+
 notebooks/ → exploratory and validation analysis
+
 data/processed/ → clean dataset (parquet)
+
 outputs/ → figures and results
+
 docs/ → methodology and dataset notes
 
 ## Current Status
 
-## Data pipeline: complete
+ Data pipeline: complete
 
-## Return computation: complete
+ Return computation: complete
 
-## Portfolio construction: in progress
+ Portfolio construction: in progress
 
-## EVT modelling: upcoming
+ EVT modelling: upcoming
 
 
 ## Reproducibility
-
-## To run the pipeline:
+To run the pipeline:
 
 pip install -r requirements.txt
 
